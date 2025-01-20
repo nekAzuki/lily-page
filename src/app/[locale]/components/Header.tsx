@@ -4,7 +4,6 @@ import { useTranslations } from 'next-intl'
 import { FC } from 'react'
 import GithubIcon from '../../icons/github'
 import LogoIcon from '../../icons/logo'
-import LangSwitcher from './LangSwitcher'
 import ThemeSwitch from './ThemeSwitch'
 interface Props {
   locale: string
@@ -12,13 +11,13 @@ interface Props {
 export const Header: FC<Props> = ({ locale }) => {
   const t = useTranslations('')
   return (
-    <div className='mx-auto flex max-w-screen-2xl flex-row items-center justify-between p-5'>
+    <div className='mx-auto flex max-w-full h-16 flex-row items-center justify-between p-5 sticky top-0 backdrop-blur-lg bg-gray-300 bg-opacity-20'>
       <Link lang={locale} href='/'>
         <div className='flex flex-row items-center'>
           <div className='mb-2 h-14 w-14'>
             <LogoIcon />
           </div>
-          <strong className='mx-2 select-none'>Template</strong>
+          <strong className='mx-2 select-none'>qiansuiliyi</strong>
         </div>
       </Link>
       <div className='flex flex-row items-center gap-3'>
@@ -30,7 +29,6 @@ export const Header: FC<Props> = ({ locale }) => {
           <a href=''>{t('Other')}</a>
         </nav>
         <ThemeSwitch />
-        <LangSwitcher />
         <a
           href='https://github.com/yahyaparvar/nextjs-template'
           target='_blank'

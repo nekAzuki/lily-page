@@ -1,4 +1,5 @@
 import { useTranslations } from 'next-intl'
+import Image from 'next/image'
 import Button from './components/Button'
 
 export default function DashboardPage() {
@@ -19,13 +20,19 @@ export default function DashboardPage() {
             'An_approachable_performant_and_versatile_boilerplate_for_building_SSR_applications'
           )}
         </div>
+        <Image
+          src="https://i0.hdslb.com/bfs/face/d8e85f206059c8d660694dc1d8d26e2d15554c3d.jpg@240w_240h_1c_1s_!web-avatar-space-header.avif"
+          alt="Picture of the author"
+          width={500}
+          height={500}
+        />
         <div className='mt-4 flex flex-row gap-4'>
           <a
             href='https://github.com/new?template_name=nextjs-template&template_owner=yahyaparvar'
             target='_blank'
           >
             <Button rounded size='large'>
-              {t('Use_Template')}
+              {t('hello world')}
             </Button>
           </a>
           <a

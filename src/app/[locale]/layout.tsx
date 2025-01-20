@@ -9,6 +9,7 @@ import { Inter, Rubik, Space_Grotesk } from 'next/font/google'
 import NextTopLoader from 'nextjs-toploader'
 import { Header } from './components/Header'
 import './globals.css'
+import { getImageProps } from 'next/image'
 
 const inter = Inter({
   subsets: ['latin'],
@@ -43,6 +44,8 @@ export default function RootLayout({
       suppressHydrationWarning
     >
       <body>
+        <div className="bg-bg bg-fixed bg-cover">
+          <div className="bg-gray-100 bg-opacity-50">
         <ThemeProvider
           enableSystem
           attribute='class'
@@ -51,11 +54,6 @@ export default function RootLayout({
             'light',
             'dark',
             'instagram',
-            'facebook',
-            'discord',
-            'netflix',
-            'twilight',
-            'reddit'
           ]}
         >
           <NextIntlClientProvider
@@ -77,6 +75,8 @@ export default function RootLayout({
             <main className='mx-auto max-w-screen-2xl'>{children}</main>
           </NextIntlClientProvider>
         </ThemeProvider>
+          </div>
+        </div>
       </body>
     </html>
   )

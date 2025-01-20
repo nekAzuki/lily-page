@@ -19,7 +19,8 @@ const config = {
     },
     extend: {
       backgroundImage: {
-        'span-bg': 'var(--span-bg)'
+        'span-bg': 'var(--span-bg)',
+        'bg': "url('/bg.jpg')",
       },
       colors: {
         background: 'var(--background)',
