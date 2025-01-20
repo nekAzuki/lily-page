@@ -1,11 +1,7 @@
 'use client'
-import { FC } from 'react'
 import GithubIcon from '../icons/github'
 import LogoIcon from '../icons/logo'
-interface Props {
-  locale: string
-}
-export const Header: FC<Props> = () => {
+export const Header = () => {
   return (
     <div className='mx-auto flex max-w-full h-16 flex-row items-center justify-between p-5 sticky top-0 backdrop-blur-lg bg-gray-300 bg-opacity-20'>
         <div className='flex flex-row items-center'>
